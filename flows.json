@@ -1,0 +1,351 @@
+[
+    {
+        "id": "1b5ea6652c1732a2",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "16fdab4a425a3d43",
+        "type": "ui_tab",
+        "name": "Monitoring",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b0277e94b09691e3",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "596d14b9e251a206",
+        "type": "ui_group",
+        "name": "Sensor TDS",
+        "tab": "16fdab4a425a3d43",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9c96a6857c2a67e4",
+        "type": "ui_group",
+        "name": "Tabel History",
+        "tab": "16fdab4a425a3d43",
+        "order": 3,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e0d7aaf5f184e142",
+        "type": "ui_group",
+        "name": "space",
+        "tab": "16fdab4a425a3d43",
+        "order": 2,
+        "disp": false,
+        "width": "1",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7c8c1ee7a77e4d29",
+        "type": "tls-config",
+        "name": "hivemq_tls",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "a9bf78b917ce43d4bf57cb5837694ae0.s1.eu.hivemq.cloud",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "76dca558640cc35e",
+        "type": "mqtt-broker",
+        "name": "kkn_nodeRed",
+        "broker": "a9bf78b917ce43d4bf57cb5837694ae0.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "7c8c1ee7a77e4d29",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "sensor/tds",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d99d32661953487e",
+        "type": "mqtt in",
+        "z": "1b5ea6652c1732a2",
+        "name": "TDS Value",
+        "topic": "sensor/tds",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "76dca558640cc35e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 560,
+        "y": 1720,
+        "wires": [
+            [
+                "e12d6e5564822b6f",
+                "90c07f02ae13b8bc",
+                "aba43ca74938aa53",
+                "8c9af729d31a0287",
+                "0420df29a232528b"
+            ]
+        ]
+    },
+    {
+        "id": "e12d6e5564822b6f",
+        "type": "ui_text",
+        "z": "1b5ea6652c1732a2",
+        "group": "596d14b9e251a206",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "TDS",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 890,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "aba43ca74938aa53",
+        "type": "ui_template",
+        "z": "1b5ea6652c1732a2",
+        "group": "596d14b9e251a206",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"text-align:center\">\n  <h2 style=\"color:#007acc\">Monitoring Sensor TDS</h2>\n  <p style=\"font-size:16px\">\n    Sensor ini memantau kadar Total Dissolved Solids (TDS) dalam air secara real-time.\n  </p>\n  <img src=\"https://cdn-icons-png.flaticon.com/512/2933/2933825.png\" width=\"100\"/>\n</div>\n<script src=\"https://cdn.jsdelivr.net/npm/sweetalert2@11\"></script>\n<div>\n  <p>TDS saat ini: {{msg.payload}} ppm</p>\n</div>\n\n<script>\n  (function(scope) {\n    scope.$watch('msg.payload', function(value) {\n        if (value < 10) {\n            Swal.fire({\n                title: 'Peringatan!',\n                text: 'Nilai TDS melebihi ambang batas: ' + value + ' ppm',\n                icon: 'warning',\n                confirmButtonText: 'OK'\n            });\n        }\n    });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 880,
+        "y": 1780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "90c07f02ae13b8bc",
+        "type": "ui_gauge",
+        "z": "1b5ea6652c1732a2",
+        "name": "",
+        "group": "596d14b9e251a206",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Level TDS",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 890,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "8c9af729d31a0287",
+        "type": "function",
+        "z": "1b5ea6652c1732a2",
+        "name": "History TDS",
+        "func": "// Cek apakah payload berupa angka valid\nlet value = parseFloat(msg.payload);\nif (isNaN(value)) return null; // jika bukan angka, abaikan saja\n\nlet newData = {\n    no: flow.get(\"count\") || 1,\n    time: new Date().toLocaleTimeString('en-GB'),\n    tds: value.toFixed(2)\n};\n\nlet history = flow.get(\"history\") || [];\n\nif (history.length >= 10) {\n    history.shift();\n}\nhistory.push(newData);\n\nflow.set(\"history\", history);\nflow.set(\"count\", newData.no + 1);\n\n// Kirim ke ui_table\nmsg.payload = history;\nmsg.ui_control = {\n    tabulator: {\n        columns: [\n            { title: \"No\", field: \"no\", width: 60 },\n            { title: \"Waktu\", field: \"time\", width: 120 },\n            { title: \"TDS (ppm)\", field: \"tds\", width: 100 }\n        ]\n    }\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 1860,
+        "wires": [
+            [
+                "37401abfcc618600"
+            ]
+        ]
+    },
+    {
+        "id": "37401abfcc618600",
+        "type": "ui_template",
+        "z": "1b5ea6652c1732a2",
+        "group": "9c96a6857c2a67e4",
+        "name": "History Table",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<table style=\"width:100%; text-align:left; border-collapse:collapse;\">\n    <thead>\n        <tr style=\"background:#ddd;\">\n            <th>No</th>\n            <th>Waktu</th>\n            <th>TDS (ppm)</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr ng-repeat=\"item in msg.payload track by $index\">\n            <td>{{$index + 1}}</td>\n            <td>{{item.time}}</td>\n            <td>{{item.tds}}</td>\n        </tr>\n    </tbody>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1090,
+        "y": 1860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0420df29a232528b",
+        "type": "ui_template",
+        "z": "1b5ea6652c1732a2",
+        "group": "e0d7aaf5f184e142",
+        "name": "template",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    .table-custom .nr-dashboard-template,\n    .table-custom md-card {\n        margin: 10px;\n        padding: 10px;\n        max-width: 420px;\n        /* BATASI lebar maksimal */\n        width: 100%;\n    }\n\n    .table-custom table {\n        width: 100%;\n        font-size: 14px;\n        border-collapse: collapse;\n    }\n\n    .table-custom th,\n    .table-custom td {\n        padding: 8px 12px;\n        text-align: left;\n    }\n\n    .table-custom th {\n        background-color: #d9d9d9;\n        font-weight: bold;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 880,
+        "y": 1920,
+        "wires": [
+            []
+        ]
+    }
+]
