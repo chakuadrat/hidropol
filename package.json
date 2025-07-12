@@ -1,0 +1,11 @@
+{
+  "name": "node-red-project",
+  "version": "1.0.0",
+  "description": "Node-RED IoT Monitoring Project",
+  "scripts": {
+    "start": "node-red"
+  },
+  "dependencies": {
+    "node-red": "^3.1.0"
+  }
+}
